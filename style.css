@@ -62,7 +62,9 @@
 /* ==========================================================================
    Base & Reset
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -81,7 +83,8 @@ body.editorial-body {
   line-height: 1.6;
   position: relative;
   min-height: 100vh;
-  padding-bottom: 110px; /* Space for the bottom navigation dock */
+  padding-bottom: 110px;
+  /* Space for the bottom navigation dock */
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -279,6 +282,7 @@ body.editorial-body {
     opacity: 0;
     transform: translateY(22px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -384,8 +388,7 @@ body.editorial-body {
       rgba(255, 255, 255, 0.02) 0px,
       rgba(255, 255, 255, 0.02) 58px,
       rgba(0, 0, 0, 0.4) 59px,
-      rgba(0, 0, 0, 0.6) 60px
-    ),
+      rgba(0, 0, 0, 0.6) 60px),
     linear-gradient(135deg, #24130C 0%, #381E14 50%, #210F08 100%);
 }
 
@@ -547,8 +550,17 @@ body.editorial-body {
 }
 
 @keyframes sparkleTwinkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
-  50% { opacity: 1; transform: scale(1.2) rotate(45deg); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg);
+  }
 }
 
 /* Massive Swash Typography (Heels Class Inspired) */
@@ -758,7 +770,8 @@ body.editorial-body {
   top: 3rem;
 }
 
-.mint-left-track span, .mint-right-track span {
+.mint-left-track span,
+.mint-right-track span {
   background-color: var(--wine-primary);
 }
 
@@ -811,8 +824,13 @@ body.editorial-body {
 }
 
 @keyframes rotateSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .emblem-center-text {
@@ -2075,7 +2093,8 @@ body.editorial-body {
   margin-bottom: 0.35rem;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
   width: 100%;
   padding: 0.75rem 1rem;
   font-family: var(--font-body);
@@ -2087,7 +2106,8 @@ body.editorial-body {
   transition: var(--transition-fast);
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
   outline: none;
   background-color: #FFFFFF;
   border-color: var(--mint-deep);
@@ -2414,7 +2434,8 @@ body.editorial-body {
   }
 
   .dock-link span.dock-text {
-    display: none; /* Icon-only on very compact mobile or keep if small */
+    display: none;
+    /* Icon-only on very compact mobile or keep if small */
   }
 
   .dock-mini-action {
@@ -2436,6 +2457,7 @@ body.editorial-body {
    Print / PDF Export Clean Formats
    ========================================================================== */
 @media print {
+
   .no-print,
   .top-editorial-bar,
   .bottom-dock-nav,

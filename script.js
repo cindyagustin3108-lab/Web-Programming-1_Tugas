@@ -59,7 +59,7 @@ function inisialisasiNavigasiSPA() {
  * @param {string} tabId - ID section yang ingin ditampilkan (profil, pendidikan, dll)
  * @param {boolean} updateHash - Menentukan apakah URL hash ikut diperbarui
  */
-window.switchSPATab = function(tabId, updateHash = true) {
+window.switchSPATab = function (tabId, updateHash = true) {
   pindahHalaman(tabId, updateHash);
 };
 
@@ -149,7 +149,7 @@ function inisialisasiFilterPengalaman() {
    3. Fitur Salin Kontak (Copy to Clipboard)
    Memudahkan pengunjung menyalin email atau nomor WhatsApp ke clipboard
    ============================================================================== */
-window.copyToClipboard = function(teks, label = 'Teks') {
+window.copyToClipboard = function (teks, label = 'Teks') {
   if (navigator.clipboard && window.isSecureContext) {
     navigator.clipboard.writeText(teks).then(() => {
       tampilkanToast(`${label} berhasil disalin ke clipboard!`);
